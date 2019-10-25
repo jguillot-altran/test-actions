@@ -1,0 +1,22 @@
+{
+  "name": "test-actions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jguillot-altran/test-actions.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jguillot-altran/test-actions/issues"
+  },
+  "homepage": "https://github.com/jguillot-altran/test-actions#readme",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
