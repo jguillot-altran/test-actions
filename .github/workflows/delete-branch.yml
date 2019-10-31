@@ -1,4 +1,4 @@
-name: CI
+name: Delete branch on merge
 
 on:
   pull_request:
@@ -10,6 +10,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Delete merged branch
-      uses: SvanBoxel/delete-merged-branch@v1.3.3
+      - name: Delete merged branch
+        uses: SvanBoxel/delete-merged-branch@v1.3.3
