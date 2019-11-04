@@ -15,8 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Run a multi-line script
+    - name: Delete merged branch
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
@@ -47,8 +46,8 @@ jobs:
                   "${URI}/repos/${owner}/${repo}" | jq .default_branch
               )
               
-              # Never delete the default branch.
-              if [[ "$ref" == "$default_branch" ]]; then
+              # Never delete the default branch or develop.
+              if [[ "$ref" == "$default_branch" || "$ref" == "develop" ]]; then
                 echo "Will not delete default branch (${default_branch}) for ${owner}/${repo}, exiting."
                 exit 0
               fi
